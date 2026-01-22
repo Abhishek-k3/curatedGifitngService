@@ -4,7 +4,7 @@
   --accent-color: #DC143C; /* Crimson - deep red */
   --ivory: #FFFFF0; /* Ivory */
   --saffron: #FF9933; /* Saffron */
-  --heritage-green: #228B22; /* Forest Green */
+  --heritage-green: #313323; /* Forest Green */
   --dark-contrast: #313323; /* Dark heritage color */
   --medium-contrast: #DFD9CD; /* Medium heritage color */
   --low-contrast: #F9F2EA; /* Light heritage color */
@@ -416,8 +416,9 @@ section {
   right: 0;
   bottom: 0;
   background: #313323;
-  opacity: 0.9;
+  opacity: 0.5;
   z-index: 1;
+  color: white;
 }
 
 .about-content {
@@ -570,6 +571,10 @@ section {
     linear-gradient(135deg, transparent 35%, rgba(249, 242, 234, 0.008) 50%, transparent 65%);
   background-size: 260px 260px, 190px 190px, 130px 130px;
   background-blend-mode: overlay;
+  color: black;
+}
+
+.heritage-heading {
   color: white;
 }
 
@@ -590,7 +595,7 @@ section {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.3rem;
   background: rgba(255,255,255,0.1);
   border-radius: 8px;
   backdrop-filter: blur(10px);

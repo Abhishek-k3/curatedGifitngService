@@ -6,11 +6,11 @@ const priceRanges = ['₹100–₹500', '₹500–₹1000', '₹1000–₹2000',
 const occasions = ['Pellikoothuru', 'Haldi Function', 'Birthday Party', 'Marriage', 'Bride-to-Be / Bridal Events'];
 
 const gifts = [
-  { name: 'Luxury Hamper', category: 'Gift Hampers', priceRange: '₹1000–₹2000', occasion: 'Marriage', image: '/images/hamper.jpg' },
-  { name: 'Personalized Mug', category: 'Personalized Gifts', priceRange: '₹100–₹500', occasion: 'Birthday Party', image: '/images/mug.jpg' },
-  { name: 'Ready-Made Gift Box', category: 'Ready-Made Gifts', priceRange: '₹500–₹1000', occasion: 'Haldi Function', image: '/images/box.jpg' },
-  { name: 'Bulk Gift Set', category: 'Bulk Orders', priceRange: '₹2000 and above', occasion: 'Bride-to-Be / Bridal Events', image: '/images/bulk.jpg' },
-  { name: 'Return Gift Basket', category: 'Return Gifts', priceRange: '₹100–₹500', occasion: 'Pellikoothuru', image: '/images/basket.jpg' },
+  { name: 'Luxury Hamper', category: 'Gift Hampers', priceRange: '₹1000–₹2000', occasion: 'Marriage', image: 'images/hamper.jpg' },
+  { name: 'Customized Gifts', category: 'Personalized Gifts', priceRange: '₹100–₹500', occasion: 'Birthday Party', image: 'images/hamper.jpg' },
+  { name: 'Ready-Made Gift Box', category: 'Ready-Made Gifts', priceRange: '₹500–₹1000', occasion: 'Haldi Function', image: 'images/hamper.jpg' },
+  { name: 'Bulk Gift Set', category: 'Bulk Orders', priceRange: '₹2000 and above', occasion: 'Bride-to-Be / Bridal Events', image: 'images/hamper.jpg' },
+  { name: 'Return Gift Basket', category: 'Return Gifts', priceRange: '₹100–₹500', occasion: 'Pellikoothuru', image: 'images/hamper.jpg' },
 ];
 
 let filteredGifts = [...gifts];
@@ -18,6 +18,7 @@ let filteredGifts = [...gifts];
 function renderGifts() {
   const container = document.getElementById('gifts-container');
   container.innerHTML = '';
+
   filteredGifts.forEach(gift => {
     const div = document.createElement('div');
     div.className = 'gift-item';
@@ -68,7 +69,7 @@ document.querySelector('#app').innerHTML = `
 
   <section id="about" class="about-section">
     <div class="container">
-      <h2 >About Our Heritage</h2>
+      <h2 class="heritage-heading">About Our Heritage</h2>
       <div class="about-content">
         <div class="about-text">
           <p>Rooted in India's rich cultural heritage, we curate gifts that tell stories of tradition, craftsmanship, and celebration. From wedding hampers to festival offerings, each gift reflects the essence of Indian artistry and warmth.</p>
@@ -76,28 +77,16 @@ document.querySelector('#app').innerHTML = `
         </div>
         <div class="heritage-symbols">
           <div class="symbol">
-            <svg width="50" height="50" viewBox="0 0 100 100">
-              <path d="M50 10 L90 90 L10 90 Z" fill="var(--saffron)"/>
-              <circle cx="50" cy="50" r="15" fill="var(--ivory)"/>
-              <circle cx="50" cy="50" r="8" fill="var(--primary-color)"/>
-            </svg>
-            <p>Om</p>
+            <img width="100" height="100" src="public/images/heart-sutra-om-mani-padme-hum-mantra-sanskrit-sanskrit-six-types-of-mantra-63d54216451533505bed997d44ddf172.png" class="heritage-icon" />
+            <p>Dharma</p>
           </div>
           <div class="symbol">
-            <svg width="50" height="50" viewBox="0 0 100 100">
-              <rect x="20" y="20" width="60" height="60" fill="var(--heritage-green)" rx="10"/>
-              <circle cx="50" cy="50" r="20" fill="var(--ivory)"/>
-              <circle cx="50" cy="50" r="12" fill="var(--primary-color)"/>
-              <circle cx="50" cy="50" r="6" fill="var(--secondary-color)"/>
-            </svg>
-            <p>Lotus</p>
+            <img width="100" height="100" src="public/images/buddhist-symbolism-dharmachakra-buddhism-wheel-of-dharma-f4ded094ccbe75ce53895c16ed0f4205.png" class="heritage-icon" />
+            <p>Sanskriti</p>
           </div>
           <div class="symbol">
-            <svg width="50" height="50" viewBox="0 0 100 100">
-              <path d="M20 50 Q50 20 80 50 Q50 80 20 50" fill="var(--accent-color)"/>
-              <path d="M35 50 Q50 35 65 50 Q50 65 35 50" fill="var(--ivory)"/>
-            </svg>
-            <p>Rangoli</p>
+            <img width="100" height="100" src="public/images/upanishads-hindu-scriptures-hindu-texts-hinduism-religious-text-hinduism-6a483f0dff7b8d950f476a4c67cef771.png" class="heritage-icon" />
+            <p>Parampara</p>
           </div>
         </div>
       </div>
@@ -213,19 +202,19 @@ document.querySelector('#app').innerHTML = `
             <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary-color)">
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
             </svg>
-            <span>Mumbai, Maharashtra, India</span>
+            <span>Bengaluru, Karnataka, India</span>
           </div>
           <div class="contact-item">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary-color)">
               <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
             </svg>
-            <span>+91 98765 43210</span>
+            <span>+91-8296604013</span>
           </div>
           <div class="contact-item">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary-color)">
               <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
-            <span>info@curatedgifting.in</span>
+            <span>lakshmi.kothakota@gmail.com</span>
           </div>
         </div>
         <div id="enquiry"></div>
