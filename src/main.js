@@ -68,7 +68,7 @@ document.querySelector('#app').innerHTML = `
 
   <section id="about" class="about-section">
     <div class="container">
-      <h2>About Our Heritage</h2>
+      <h2 >About Our Heritage</h2>
       <div class="about-content">
         <div class="about-text">
           <p>Rooted in India's rich cultural heritage, we curate gifts that tell stories of tradition, craftsmanship, and celebration. From wedding hampers to festival offerings, each gift reflects the essence of Indian artistry and warmth.</p>
