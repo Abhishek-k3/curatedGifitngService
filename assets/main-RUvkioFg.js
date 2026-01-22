@@ -36,15 +36,15 @@ import"./style-CsjF0D4m.js";var e=[`Gift Hampers`,`Ready-Made Gifts`,`Personaliz
         </div>
         <div class="heritage-symbols">
           <div class="symbol">
-            <img width="100" height="100" src="/images/heart-sutra-om-mani-padme-hum-mantra-sanskrit-sanskrit-six-types-of-mantra-63d54216451533505bed997d44ddf172.png" class="heritage-icon" />
+            <img width="100" height="100" src="images/heart-sutra-om-mani-padme-hum-mantra-sanskrit-sanskrit-six-types-of-mantra-63d54216451533505bed997d44ddf172.png" class="heritage-icon" />
             <p>Dharma</p>
           </div>
           <div class="symbol">
-            <img width="100" height="100" src="/images/buddhist-symbolism-dharmachakra-buddhism-wheel-of-dharma-f4ded094ccbe75ce53895c16ed0f4205.png" class="heritage-icon" />
+            <img width="100" height="100" src="images/buddhist-symbolism-dharmachakra-buddhism-wheel-of-dharma-f4ded094ccbe75ce53895c16ed0f4205.png" class="heritage-icon" />
             <p>Sanskriti</p>
           </div>
           <div class="symbol">
-            <img width="100" height="100" src="/images/upanishads-hindu-scriptures-hindu-texts-hinduism-religious-text-hinduism-6a483f0dff7b8d950f476a4c67cef771.png" class="heritage-icon" />
+            <img width="100" height="100" src="images/upanishads-hindu-scriptures-hindu-texts-hinduism-religious-text-hinduism-6a483f0dff7b8d950f476a4c67cef771.png" class="heritage-icon" />
             <p>Parampara</p>
           </div>
         </div>
