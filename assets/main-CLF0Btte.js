@@ -1,4 +1,4 @@
-import"./style-SHq9n3H5.js";var e=[`Gift Hampers`,`Ready-Made Gifts`,`Personalized Gifts`,`Bulk Orders`,`Return Gifts`],t=[`₹100–₹500`,`₹500–₹1000`,`₹1000–₹2000`,`₹2000 and above`],n=[`Pellikoothuru`,`Haldi Function`,`Birthday Party`,`Marriage`,`Bride-to-Be / Bridal Events`],r=[{name:`Luxury Hamper`,category:`Gift Hampers`,priceRange:`₹1000–₹2000`,occasion:`Marriage`,image:`/images/hamper.jpg`},{name:`Personalized Mug`,category:`Personalized Gifts`,priceRange:`₹100–₹500`,occasion:`Birthday Party`,image:`/images/mug.jpg`},{name:`Ready-Made Gift Box`,category:`Ready-Made Gifts`,priceRange:`₹500–₹1000`,occasion:`Haldi Function`,image:`/images/box.jpg`},{name:`Bulk Gift Set`,category:`Bulk Orders`,priceRange:`₹2000 and above`,occasion:`Bride-to-Be / Bridal Events`,image:`/images/bulk.jpg`},{name:`Return Gift Basket`,category:`Return Gifts`,priceRange:`₹100–₹500`,occasion:`Pellikoothuru`,image:`/images/basket.jpg`}],i=[...r];function a(){let e=document.getElementById(`gifts-container`);e.innerHTML=``,i.forEach(t=>{let n=document.createElement(`div`);n.className=`gift-item`,n.innerHTML=`
+import"./style-CPelp5ZK.js";var e=[`Gift Hampers`,`Ready-Made Gifts`,`Personalized Gifts`,`Bulk Orders`,`Return Gifts`],t=[`₹100–₹500`,`₹500–₹1000`,`₹1000–₹2000`,`₹2000 and above`],n=[`Pellikoothuru`,`Haldi Function`,`Birthday Party`,`Marriage`,`Bride-to-Be / Bridal Events`],r=[{name:`Luxury Hamper`,category:`Gift Hampers`,priceRange:`₹1000–₹2000`,occasion:`Marriage`,image:`/images/hamper.jpg`},{name:`Personalized Mug`,category:`Personalized Gifts`,priceRange:`₹100–₹500`,occasion:`Birthday Party`,image:`/images/mug.jpg`},{name:`Ready-Made Gift Box`,category:`Ready-Made Gifts`,priceRange:`₹500–₹1000`,occasion:`Haldi Function`,image:`/images/box.jpg`},{name:`Bulk Gift Set`,category:`Bulk Orders`,priceRange:`₹2000 and above`,occasion:`Bride-to-Be / Bridal Events`,image:`/images/bulk.jpg`},{name:`Return Gift Basket`,category:`Return Gifts`,priceRange:`₹100–₹500`,occasion:`Pellikoothuru`,image:`/images/basket.jpg`}],i=[...r];function a(){let e=document.getElementById(`gifts-container`);e.innerHTML=``,i.forEach(t=>{let n=document.createElement(`div`);n.className=`gift-item`,n.innerHTML=`
       <img src="${t.image}" alt="${t.name}">
       <h3>${t.name}</h3>
       <p>Category: ${t.category}</p>
@@ -15,7 +15,7 @@ import"./style-SHq9n3H5.js";var e=[`Gift Hampers`,`Ready-Made Gifts`,`Personaliz
         ${e.map(e=>`<option value="${e}">${e}</option>`).join(``)}
       </select>
       <select id="price-filter">
-        <option value="">All Prices</option>
+        <option value="">All Price Ranges</option>
         ${t.map(e=>`<option value="${e}">${e}</option>`).join(``)}
       </select>
       <select id="occasion-filter">
@@ -25,11 +25,11 @@ import"./style-SHq9n3H5.js";var e=[`Gift Hampers`,`Ready-Made Gifts`,`Personaliz
     </section>
     <section id="gifts-container"></section>
     <section id="enquiry">
-      <h2>Enquire Now</h2>
+      <h2>Send Us Your Enquiry</h2>
       <form id="enquiry-form">
-        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="name" placeholder="Full Name" required>
         <input type="tel" id="phone" placeholder="Phone Number" required>
-        <input type="email" id="email" placeholder="Email (optional)">
+        <input type="email" id="email" placeholder="Email Address (Optional)">
         <select id="enquiry-occasion" required>
           <option value="">Select Occasion</option>
           ${n.map(e=>`<option value="${e}">${e}</option>`).join(``)}
@@ -38,7 +38,7 @@ import"./style-SHq9n3H5.js";var e=[`Gift Hampers`,`Ready-Made Gifts`,`Personaliz
           <option value="">Select Budget Range</option>
           ${t.map(e=>`<option value="${e}">${e}</option>`).join(``)}
         </select>
-        <textarea id="message" placeholder="Message / Custom Request"></textarea>
+        <textarea id="message" placeholder="Tell us about your requirements..."></textarea>
         <button type="submit">Submit Enquiry</button>
       </form>
     </section>
