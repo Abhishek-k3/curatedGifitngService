@@ -284,7 +284,7 @@ document.getElementById('category-filter').addEventListener('change', filterGift
 document.getElementById('price-filter').addEventListener('change', filterGifts);
 document.getElementById('occasion-filter').addEventListener('change', filterGifts);
 
-document.getElementById('enquiry-form').addEventListener('submit', (e) => {
+document.getElementById('enquiry-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const enquiry = {
     name: document.getElementById('name').value,
@@ -295,9 +295,16 @@ document.getElementById('enquiry-form').addEventListener('submit', (e) => {
     message: document.getElementById('message').value,
     timestamp: new Date().toISOString()
   };
-  const enquiries = JSON.parse(localStorage.getItem('enquiries') || '[]');
-  enquiries.push(enquiry);
-  localStorage.setItem('enquiries', JSON.stringify(enquiries));
-  alert('Enquiry submitted!');
-  document.getElementById('enquiry-form').reset();
+   const response = await fetch('https://curatedgifitngservice-backend.onrender.com/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(enquiry)
+  });
+
+  if (response.ok) {
+    alert('Enquiry sent successfully!');
+    e.target.reset();
+  } else {
+    alert('Failed to send enquiry');
+  }
 });
