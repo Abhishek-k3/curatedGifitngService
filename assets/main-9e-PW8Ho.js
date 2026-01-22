@@ -1,39 +1,39 @@
-import"./style-CsjF0D4m.js";var e=[`Gift Hampers`,`Ready-Made Gifts`,`Personalized Gifts`,`Bulk Orders`,`Return Gifts`],t=[`₹100–₹500`,`₹500–₹1000`,`₹1000–₹2000`,`₹2000 and above`],n=[`Pellikoothuru`,`Haldi Function`,`Birthday Party`,`Marriage`,`Bride-to-Be / Bridal Events`],r=[{name:`Luxury Hamper`,category:`Gift Hampers`,priceRange:`₹1000–₹2000`,occasion:`Marriage`,image:`images/hamper.jpg`},{name:`Customized Gifts`,category:`Personalized Gifts`,priceRange:`₹100–₹500`,occasion:`Birthday Party`,image:`images/hamper.jpg`},{name:`Ready-Made Gift Box`,category:`Ready-Made Gifts`,priceRange:`₹500–₹1000`,occasion:`Haldi Function`,image:`images/hamper.jpg`},{name:`Bulk Gift Set`,category:`Bulk Orders`,priceRange:`₹2000 and above`,occasion:`Bride-to-Be / Bridal Events`,image:`images/hamper.jpg`},{name:`Return Gift Basket`,category:`Return Gifts`,priceRange:`₹100–₹500`,occasion:`Pellikoothuru`,image:`images/hamper.jpg`}],i=[...r];function a(){let e=document.getElementById(`gifts-container`);e.innerHTML=``,i.forEach(t=>{let n=document.createElement(`div`);n.className=`gift-item`,n.innerHTML=`
+import"./style-Bwa7oydh.js";var e=[`Gift Hampers`,`Ready-Made Gifts`,`Personalized Gifts`,`Bulk Orders`,`Return Gifts`],t=[`₹100–₹500`,`₹500–₹1000`,`₹1000–₹2000`,`₹2000 and above`],n=[`Pellikoothuru`,`Haldi Function`,`Birthday Party`,`Marriage`,`Bride-to-Be / Bridal Events`],r=[{name:`Luxury Hamper`,category:`Gift Hampers`,priceRange:`₹1000–₹2000`,occasion:`Marriage`,image:`images/hamper.jpg`},{name:`Customized Gifts`,category:`Personalized Gifts`,priceRange:`₹100–₹500`,occasion:`Birthday Party`,image:`images/hamper.jpg`},{name:`Ready-Made Gift Box`,category:`Ready-Made Gifts`,priceRange:`₹500–₹1000`,occasion:`Haldi Function`,image:`images/hamper.jpg`},{name:`Bulk Gift Set`,category:`Bulk Orders`,priceRange:`₹2000 and above`,occasion:`Bride-to-Be / Bridal Events`,image:`images/hamper.jpg`},{name:`Return Gift Basket`,category:`Return Gifts`,priceRange:`₹100–₹500`,occasion:`Pellikoothuru`,image:`images/hamper.jpg`}],i=[...r];function a(){let e=document.getElementById(`gifts-container`);e.innerHTML=``,i.forEach(t=>{let n=document.createElement(`div`);n.className=`gift-item`,n.innerHTML=`
       <img src="${t.image}" alt="${t.name}">
       <h3>${t.name}</h3>
       <p>Category: ${t.category}</p>
       <p>Price: ${t.priceRange}</p>
       <p>Occasion: ${t.occasion}</p>
     `,e.appendChild(n)})}function o(){let e=document.getElementById(`category-filter`).value,t=document.getElementById(`price-filter`).value,n=document.getElementById(`occasion-filter`).value;i=r.filter(r=>(!e||r.category===e)&&(!t||r.priceRange===t)&&(!n||r.occasion===n)),a()}document.querySelector(`#app`).innerHTML=`
-  <header>
-    <div class="heritage-icon">
-      <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="45" stroke="var(--ivory)" stroke-width="4" fill="var(--primary-color)"/>
-        <path d="M30 40 L50 20 L70 40 L70 70 L30 70 Z" fill="var(--ivory)"/>
-        <circle cx="50" cy="35" r="3" fill="var(--secondary-color)"/>
-        <rect x="45" y="45" width="10" height="15" fill="var(--secondary-color)"/>
-      </svg>
-    </div>
-    <h1>Curated Gifting Service</h1>
-    <p class="tagline">Celebrating Indian Heritage Through Thoughtful Gifts</p>
-  </header>
-
-  <nav class="main-nav">
+<nav class="main-nav">
     <a href="#about">About Us</a>
     <a href="#services">Our Services</a>
     <a href="#gallery">Gift Gallery</a>
     <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
+  <header>
+  <img src="images/template.png" />
+    <!-- <h1>Curated Gifting Service</h1> -->
+    <p class="tagline">Celebrating Indian Heritage Through Thoughtful Gifts</p>
+  </header>
+  <br/>
 
   <section id="about" class="about-section">
     <div class="container">
       <h2 class="heritage-heading">About Our Heritage</h2>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <div class="about-content">
         <div class="about-text">
           <p>Rooted in India's rich cultural heritage, we curate gifts that tell stories of tradition, craftsmanship, and celebration. From wedding hampers to festival offerings, each gift reflects the essence of Indian artistry and warmth.</p>
           <p>Our collection celebrates the diversity of Indian culture - from the intricate designs of Rajasthan to the vibrant colors of Kerala, from the spiritual symbols of Varanasi to the festive spirit of Diwali.</p>
         </div>
+        <!-- 
         <div class="heritage-symbols">
           <div class="symbol">
             <img width="100" height="100" src="images/heart-sutra-om-mani-padme-hum-mantra-sanskrit-sanskrit-six-types-of-mantra-63d54216451533505bed997d44ddf172.png" class="heritage-icon" />
@@ -48,6 +48,7 @@ import"./style-CsjF0D4m.js";var e=[`Gift Hampers`,`Ready-Made Gifts`,`Personaliz
             <p>Parampara</p>
           </div>
         </div>
+        -->
       </div>
     </div>
   </section>
@@ -111,7 +112,8 @@ import"./style-CsjF0D4m.js";var e=[`Gift Hampers`,`Ready-Made Gifts`,`Personaliz
 
   <section id="gallery" class="gallery-section">
     <div class="container">
-      <h2>Gift Gallery</h2>
+      <h2 style="text-align: center;">Gift Gallery</h2>
+      <br/>
       <div id="filters"></div>
       <div id="gifts-container"></div>
     </div>
