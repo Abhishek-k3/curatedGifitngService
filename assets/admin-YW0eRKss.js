@@ -1,4 +1,4 @@
-import"./style-BL_lRIFe.js";var e=`admin`,t=`admin`;function n(){document.querySelector(`#app`).innerHTML=`
+import"./style-CsjF0D4m.js";var e=`admin`,t=`admin`;function n(){document.querySelector(`#app`).innerHTML=`
     <div class="login-container">
       <h1>Admin Access</h1>
       <form id="login-form" class="login-form">
