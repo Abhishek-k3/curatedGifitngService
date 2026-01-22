@@ -46,49 +46,50 @@ function filterGifts() {
 }
 
 document.querySelector('#app').innerHTML = `
-  <header>
-    <div class="heritage-icon">
-      <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="45" stroke="var(--ivory)" stroke-width="4" fill="var(--primary-color)"/>
-        <path d="M30 40 L50 20 L70 40 L70 70 L30 70 Z" fill="var(--ivory)"/>
-        <circle cx="50" cy="35" r="3" fill="var(--secondary-color)"/>
-        <rect x="45" y="45" width="10" height="15" fill="var(--secondary-color)"/>
-      </svg>
-    </div>
-    <h1>Curated Gifting Service</h1>
-    <p class="tagline">Celebrating Indian Heritage Through Thoughtful Gifts</p>
-  </header>
-
-  <nav class="main-nav">
+<nav class="main-nav">
     <a href="#about">About Us</a>
     <a href="#services">Our Services</a>
     <a href="#gallery">Gift Gallery</a>
     <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
+  <header>
+  <img src="images/template.png" />
+    <!-- <h1>Curated Gifting Service</h1> -->
+    <p class="tagline">Celebrating Indian Heritage Through Thoughtful Gifts</p>
+  </header>
+  <br/>
 
   <section id="about" class="about-section">
     <div class="container">
       <h2 class="heritage-heading">About Our Heritage</h2>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <div class="about-content">
         <div class="about-text">
           <p>Rooted in India's rich cultural heritage, we curate gifts that tell stories of tradition, craftsmanship, and celebration. From wedding hampers to festival offerings, each gift reflects the essence of Indian artistry and warmth.</p>
           <p>Our collection celebrates the diversity of Indian culture - from the intricate designs of Rajasthan to the vibrant colors of Kerala, from the spiritual symbols of Varanasi to the festive spirit of Diwali.</p>
         </div>
+        <!-- 
         <div class="heritage-symbols">
           <div class="symbol">
-            <img width="100" height="100" src="/images/heart-sutra-om-mani-padme-hum-mantra-sanskrit-sanskrit-six-types-of-mantra-63d54216451533505bed997d44ddf172.png" class="heritage-icon" />
+            <img width="100" height="100" src="images/heart-sutra-om-mani-padme-hum-mantra-sanskrit-sanskrit-six-types-of-mantra-63d54216451533505bed997d44ddf172.png" class="heritage-icon" />
             <p>Dharma</p>
           </div>
           <div class="symbol">
-            <img width="100" height="100" src="/images/buddhist-symbolism-dharmachakra-buddhism-wheel-of-dharma-f4ded094ccbe75ce53895c16ed0f4205.png" class="heritage-icon" />
+            <img width="100" height="100" src="images/buddhist-symbolism-dharmachakra-buddhism-wheel-of-dharma-f4ded094ccbe75ce53895c16ed0f4205.png" class="heritage-icon" />
             <p>Sanskriti</p>
           </div>
           <div class="symbol">
-            <img width="100" height="100" src="/images/upanishads-hindu-scriptures-hindu-texts-hinduism-religious-text-hinduism-6a483f0dff7b8d950f476a4c67cef771.png" class="heritage-icon" />
+            <img width="100" height="100" src="images/upanishads-hindu-scriptures-hindu-texts-hinduism-religious-text-hinduism-6a483f0dff7b8d950f476a4c67cef771.png" class="heritage-icon" />
             <p>Parampara</p>
           </div>
         </div>
+        -->
       </div>
     </div>
   </section>
@@ -152,7 +153,8 @@ document.querySelector('#app').innerHTML = `
 
   <section id="gallery" class="gallery-section">
     <div class="container">
-      <h2>Gift Gallery</h2>
+      <h2 style="text-align: center;">Gift Gallery</h2>
+      <br/>
       <div id="filters"></div>
       <div id="gifts-container"></div>
     </div>

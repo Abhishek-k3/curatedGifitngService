@@ -40,7 +40,7 @@ body {
   line-height: 1.6;
 }
 
-header {
+/* header {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: var(--ivory);
   padding: 4rem 2rem;
@@ -48,9 +48,9 @@ header {
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow);
-}
+} */
 
-header::before {
+/* header::before {
   content: '';
   position: absolute;
   top: 0;
@@ -62,7 +62,7 @@ header::before {
     radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(255,255,255,0.05) 0%, transparent 50%);
   animation: float 20s infinite linear;
-}
+} */
 
 @keyframes float {
   0% { transform: translateY(0) rotate(0deg); }
@@ -325,11 +325,11 @@ button:disabled:hover {
 /* Vertical Layout Sections */
 header {
   text-align: center;
-  padding: 4rem 2rem 2rem;
-  background: var(--dark-contrast);
-  background-image:
+  padding: 0rem 2rem 2rem;
+  /* background: var(--dark-contrast); */
+  /* background-image:
     radial-gradient(circle at 40% 40%, rgba(223, 217, 205, 0.02) 0%, transparent 70%),
-    linear-gradient(90deg, transparent 45%, rgba(249, 242, 234, 0.01) 50%, transparent 55%);
+    linear-gradient(90deg, transparent 45%, rgba(249, 242, 234, 0.01) 50%, transparent 55%); */
   background-size: 180px 180px, 120px 120px;
   background-blend-mode: overlay;
   color: white;
@@ -347,10 +347,12 @@ header {
 }
 
 .tagline {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: -2rem;
   font-weight: 300;
+  color: var(--heritage-green);
+  justify-content: center;
 }
 
 .main-nav {
@@ -406,6 +408,7 @@ section {
   background-repeat: no-repeat;
   position: relative;
   color: white;
+  border-radius: 20px;
 }
 
 .about-section::before {
@@ -419,6 +422,7 @@ section {
   opacity: 0.5;
   z-index: 1;
   color: white;
+  border-radius: 20px;
 }
 
 .about-content {
@@ -517,6 +521,8 @@ section {
 
 .gallery-section {
   background: white;
+  border-radius: 20px;
+  
 }
 
 .testimonials-section {
@@ -564,15 +570,14 @@ section {
 }
 
 .contact-section {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  background-image:
-    radial-gradient(circle at 20% 30%, rgba(49, 51, 35, 0.015) 0%, transparent 65%),
-    radial-gradient(circle at 80% 70%, rgba(223, 217, 205, 0.012) 0%, transparent 65%),
-    linear-gradient(135deg, transparent 35%, rgba(249, 242, 234, 0.008) 50%, transparent 65%);
-  background-size: 260px 260px, 190px 190px, 130px 130px;
-  background-blend-mode: overlay;
+  background-color: #FFFFFF;
   color: black;
+  border-radius: 20px;
+  margin-bottom: 2rem;
 }
+
+
+
 
 .heritage-heading {
   color: white;
