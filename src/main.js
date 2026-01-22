@@ -295,11 +295,12 @@ document.getElementById('enquiry-form').addEventListener('submit', async (e) => 
     message: document.getElementById('message').value,
     timestamp: new Date().toISOString()
   };
-   const response = await fetch('https://curatedgifitngservice-backend.onrender.com/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(enquiry)
-  });
+   const response = await fetch('https://curatedgifitngservice-backend.onrender.com/send-enquiry', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(enquiry)
+});
+
 
   if (response.ok) {
     alert('Enquiry sent successfully!');
