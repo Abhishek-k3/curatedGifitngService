@@ -295,7 +295,7 @@ document.getElementById('enquiry-form').addEventListener('submit', async (e) => 
     message: document.getElementById('message').value,
     timestamp: new Date().toISOString()
   };
-   const response = await fetch('https://curatedgifitngservice-backend.onrender.com/send-enquiry', {
+   const response = await fetch('https://curatedgifitngservice-backend-production.up.railway.app/send-enquiry', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify(enquiry)
