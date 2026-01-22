@@ -273,6 +273,7 @@ function renderEnquiryForm() {
       </select>
       <textarea id="message" placeholder="Tell us about your requirements..."></textarea>
       <button type="submit">Submit Enquiry</button>
+      <div id="form-status" style="margin-top:12px; min-height:20px;"></div>
     </form>
   `;
 }
@@ -285,29 +286,119 @@ renderGifts();
 document.getElementById('category-filter').addEventListener('change', filterGifts);
 document.getElementById('price-filter').addEventListener('change', filterGifts);
 document.getElementById('occasion-filter').addEventListener('change', filterGifts);
+const loadingMessages = [
+  "Sending your message… waking people up…",
+  "Packaging your message with care 📦",
+  "Dispatching pigeons 🕊️",
+  "Talking to our servers… they're thinking 🤔"
+];
+
+const enquirySuccessMessages = [
+  "Enquiry sent! Our team has been notified and is pretending to look very busy 😄",
+  "Boom! Message delivered. Humans will take over from here 🤝",
+  "Success! Someone on our team just said, ‘Ooo, a new enquiry!’ 👀",
+  "Your message landed safely. Gifting experts assembling as we speak 🎁",
+  "Done! Our team is now emotionally invested in your enquiry 😌",
+  "Enquiry received! Expect a call faster than relatives asking wedding dates 📞😄",
+  "All set! We’ve logged your request and nodded very seriously 👍"
+];
+
+const failureMessages = [
+  "Oops! Seems the internet blinked. Try once more?",
+  "Uh oh 😅 Our server tripped. Please try again!",
+  "That didn't go as planned… tech team mildly embarrassed 🙈",
+  "Message didn't make it this time 😔 Let's give it another shot!"
+];
+
+let typingInterval = null;
+
+function typeWriter(element, text, speed = 25) {
+  if (typingInterval) {
+    clearInterval(typingInterval);
+    typingInterval = null;
+  }
+
+  element.innerHTML = "";
+  let i = 0;
+
+  typingInterval = setInterval(() => {
+    element.innerHTML += text.charAt(i);
+    i++;
+
+    if (i >= text.length) {
+      clearInterval(typingInterval);
+      typingInterval = null;
+    }
+  }, speed);
+}
+
+function getRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function renderSuccessState() {
+  const enquiryContainer = document.getElementById('enquiry');
+
+  enquiryContainer.innerHTML = `
+    <div class="enquiry-success">
+      <h3>✅ Enquiry Sent!</h3>
+      <p>${getRandom(enquirySuccessMessages)}</p>
+    </div>
+  `;
+}
 
 document.getElementById('enquiry-form').addEventListener('submit', async (e) => {
   e.preventDefault();
+
+  const form = e.target;
+  const submitButton = form.querySelector('button[type="submit"]');
+  const statusEl = document.getElementById('form-status');
+
+  // Disable submit while loading
+  submitButton.disabled = true;
+  submitButton.innerText = 'Submitting...';
+
+  let loaderIndex = 0;
+  typeWriter(statusEl, loadingMessages[loaderIndex], 20);
+
+  const loaderInterval = setInterval(() => {
+    loaderIndex = (loaderIndex + 1) % loadingMessages.length;
+    typeWriter(statusEl, loadingMessages[loaderIndex]);
+  }, 2000);
+
   const enquiry = {
     name: document.getElementById('name').value,
     phone: document.getElementById('phone').value,
     email: document.getElementById('email').value,
     occasion: document.getElementById('enquiry-occasion').value,
     budget: document.getElementById('budget').value,
-    message: document.getElementById('message').value,
-    timestamp: new Date().toISOString()
+    message: document.getElementById('message').value
   };
-   const response = await fetch('https://curatedgifitngservice-backend-production.up.railway.app/send-enquiry', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(enquiry)
-});
 
+  try {
+    const response = await fetch(
+      'https://curatedgifitngservice-backend-production.up.railway.app/send-enquiry',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(enquiry)
+      }
+    );
 
-  if (response.ok) {
-    alert('Enquiry sent successfully!');
-    e.target.reset();
-  } else {
-    alert('Failed to send enquiry');
+    clearInterval(loaderInterval);
+
+    if (response.ok) {
+      renderSuccessState();   // 👈 key change
+    } else {
+      typeWriter(statusEl, getRandom(failureMessages));
+      submitButton.disabled = false;
+      submitButton.innerText = 'Submit Enquiry';
+    }
+  } catch (err) {
+    clearInterval(loaderInterval);
+    typeWriter(statusEl, getRandom(failureMessages));
+    submitButton.disabled = false;
+    submitButton.innerText = 'Submit Enquiry';
   }
 });
+
